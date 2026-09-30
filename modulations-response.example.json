@@ -1,0 +1,465 @@
+{
+  "items": [
+    {
+      "id": 123456,
+      "ticketCode": "PY-85",
+      "companyId": 10,
+      "createdAt": "2026-09-15T09:55:00Z",
+      "updatedAt": "2026-09-15T10:20:00Z",
+      "createdBy": {
+        "id": 123,
+        "firstName": "Juan",
+        "lastName": "Pérez",
+        "email": "juan.perez@empresa.com",
+        "teams": [
+          { "id": 10, "name": "Modulación Central" }
+        ],
+        "roles": [
+          { "id": 20, "name": "Modulador" }
+        ]
+      },
+
+      "client": {
+        "id": 987,
+        "code": 104522,
+        "name": "Comercial Don Pedro S.A.",
+        "fantasyName": "Despensa Don Pedro",
+        "phoneNumber": "0981111111",
+        "address": "Av. Mcal. López 1234",
+        "location": "Asunción",
+        "salesChannel": "Tradicional",
+        "sellerCode": "456",
+        "sellerName": "Pedro Gómez",
+        "territory": "T-12",
+        "salesSegment": "Minorista",
+        "salesRegion": "Central",
+        "attentionFrom": "08:00",
+        "attentionTo": "18:00",
+        "isManuallyCreated": false
+      },
+
+      "worksheets": [
+        { "number": 12345, "date": "2026-09-15", "isManuallyCreated": false }
+      ],
+
+      "state": {
+        "id": 5,
+        "code": "CLOSED",
+        "name": "Cerrado",
+        "description": "Ticket finalizado",
+        "catalogCode": null,
+        "statusGroup": "Closed",
+        "displayOrder": 5,
+        "colorHex": "#4CAF50"
+      },
+
+      "management": {
+        "assignedTo": { "id": 124, "name": "María López", "email": "maria.lopez@empresa.com" },
+        "ticketReceivedTime": "2026-09-15T10:00:00Z",
+        "startedAt": "2026-09-15T10:00:00Z",
+        "endedAt": "2026-09-15T10:20:00Z",
+        "isLate": false,
+        "currentDelegationType": null,
+        "currentDelegationStartedAt": null
+      },
+
+      "logistics": {
+        "distributionCenter": "CD Asunción",
+        "truck": "ABC123",
+        "driver": { "name": "Carlos Benítez", "phone": "0981222222" },
+        "seller": { "name": "Pedro Gómez", "phone": "0981333333" },
+        "supervisor": { "name": "Ana Ruiz", "phone": "0981444444" },
+        "chief": { "name": "Luis Duarte", "phone": "0981555555" },
+        "logisticOperator": { "name": "Transportes del Este", "phone": "0981666666" },
+        "region": "Central",
+        "salesRoom": "Sala 1",
+        "territoryId": "T-12",
+        "territoryName": "Asunción Centro"
+      },
+
+      "modulation": {
+        "origin": "Bees",
+        "modulators": [
+          { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          { "id": 124, "name": "María López", "email": "maria.lopez@empresa.com" }
+        ],
+        "totalPackages": 20,
+        "criticalityLevel": 2,
+        "criticality": "Alta",
+        "criticalityColor": "#FF9800",
+        "driverComment": "Cliente cerrado al momento de la entrega",
+        "rejectionReasons": [
+          { "id": 7, "truckCode": 12, "name": "Local cerrado" }
+        ]
+      },
+
+      "orders": [
+        {
+          "orderNumber": 5501234,
+          "correlative": 1,
+          "orderDate": "2026-09-14",
+          "deliveryDate": "2026-09-15",
+          "code": "1",
+          "orderType": "Pedido regular",
+          "status": "OPEN",
+          "fr": "R",
+          "flexOrRegular": "Regular",
+          "distributionCenter": { "id": 3, "truckCode": "101", "name": "CD Asunción" },
+          "totalAmount": 150000.5,
+          "totalQuantity": 20.0,
+          "totalHectoliters": 12.5
+        }
+      ],
+
+      "resolution": {
+        "resolutionType": "PARTIAL_DELIVERY",
+        "driverInstructions": "Entregar solo cervezas, devolver gaseosas",
+        "invoices": { "data": "001-001-0000123;001-001-0000124" },
+        "resolvedAt": "2026-09-15T10:20:00Z",
+        "resolvedBy": { "id": 124, "name": "María López", "email": "maria.lopez@empresa.com" },
+        "hlPedidos": 12.5,
+        "hlRechazados": 1.5,
+        "hlEntregados": 11.0,
+        "totalModulationTimeSeconds": 1200,
+        "totalResolutionTimeSeconds": 300,
+        "rejectedProducts": [
+          {
+            "orderNumber": 5501234,
+            "sku": "70012",
+            "productName": "Gaseosa Cola 2L x6",
+            "rejectedPackages": 2,
+            "rejectedUnits": 3,
+            "rejectedQuantity": 2.5,
+            "rejectedHectoliters": 1.5
+          }
+        ]
+      },
+
+      "timings": {
+        "tdaSeconds": 300,
+        "tdrSeconds": [600],
+        "tddSeconds": 300,
+        "tdmSeconds": 1200
+      },
+
+      "contactAttempts": [
+        {
+          "messageCount": 2,
+          "callCount": 1,
+          "clientResponded": true,
+          "comment": "Cliente acepta entrega parcial",
+          "registeredBy": { "id": 125, "name": "Sofía Martínez", "email": "sofia.martinez@empresa.com" },
+          "occurredAt": "2026-09-15T10:12:00Z"
+        }
+      ],
+
+      "resumeInteractions": [
+        {
+          "clientResponded": true,
+          "functionalResponse": true,
+          "registeredBy": { "id": 124, "name": "María López", "email": "maria.lopez@empresa.com" },
+          "occurredAt": "2026-09-15T10:15:00Z"
+        }
+      ],
+
+      "events": [
+        {
+          "id": 90001,
+          "eventType": "TICKET_CREATED",
+          "fromStateId": null,
+          "toStateId": 1,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": null,
+          "metadata": null,
+          "occurredAt": "2026-09-15T09:55:00Z"
+        },
+        {
+          "id": 90002,
+          "eventType": "MANAGEMENT_STARTED",
+          "fromStateId": 1,
+          "toStateId": 2,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": null,
+          "metadata": null,
+          "occurredAt": "2026-09-15T10:00:00Z"
+        },
+        {
+          "id": 90003,
+          "eventType": "DELEGATED",
+          "fromStateId": 2,
+          "toStateId": 2,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": "Se delega a Ventas para contactar al cliente",
+          "metadata": null,
+          "occurredAt": "2026-09-15T10:05:00Z"
+        },
+        {
+          "id": 90004,
+          "eventType": "PAUSED",
+          "fromStateId": 2,
+          "toStateId": 3,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": null,
+          "metadata": null,
+          "occurredAt": "2026-09-15T10:05:00Z"
+        },
+        {
+          "id": 90005,
+          "eventType": "CONTACT_REGISTERED",
+          "fromStateId": null,
+          "toStateId": null,
+          "user": { "id": 125, "name": "Sofía Martínez", "email": "sofia.martinez@empresa.com" },
+          "userRole": "Vendedor",
+          "comment": "Cliente acepta entrega parcial",
+          "metadata": null,
+          "occurredAt": "2026-09-15T10:12:00Z"
+        },
+        {
+          "id": 90006,
+          "eventType": "TRANSFERRED",
+          "fromStateId": 3,
+          "toStateId": 3,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": "Transferido por Juan Pérez (Modulación Central) a María López (Modulación Central). Motivo: Jornada laboral finalizada",
+          "metadata": {
+            "transferredFrom": "Juan Pérez",
+            "transferredFromEmail": "juan.perez@empresa.com",
+            "senderTeam": "Modulación Central",
+            "transferredTo": "María López",
+            "transferredToEmail": "maria.lopez@empresa.com",
+            "receiverTeam": "Modulación Central",
+            "reason": "WorkdayEnded",
+            "reasonDetail": null
+          },
+          "occurredAt": "2026-09-15T10:14:00Z"
+        },
+        {
+          "id": 90007,
+          "eventType": "RESUMED",
+          "fromStateId": 3,
+          "toStateId": 2,
+          "user": { "id": 124, "name": "María López", "email": "maria.lopez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": null,
+          "metadata": null,
+          "occurredAt": "2026-09-15T10:15:00Z"
+        },
+        {
+          "id": 90008,
+          "eventType": "CLOSED",
+          "fromStateId": 2,
+          "toStateId": 5,
+          "user": { "id": 124, "name": "María López", "email": "maria.lopez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": null,
+          "metadata": null,
+          "occurredAt": "2026-09-15T10:20:00Z"
+        }
+      ],
+
+      "reschedule": null,
+      "cancellation": null,
+
+      "remodulation": {
+        "isMotherTicket": false,
+        "parentTicketCode": null,
+        "childTicketCodes": []
+      }
+    },
+    {
+      "id": 123457,
+      "ticketCode": "PY-86",
+      "companyId": 10,
+      "createdAt": "2026-09-15T11:02:00Z",
+      "updatedAt": "2026-09-15T11:40:00Z",
+      "createdBy": {
+        "id": 123,
+        "firstName": "Juan",
+        "lastName": "Pérez",
+        "email": "juan.perez@empresa.com",
+        "teams": [
+          { "id": 10, "name": "Modulación Central" }
+        ],
+        "roles": [
+          { "id": 20, "name": "Modulador" }
+        ]
+      },
+
+      "client": {
+        "id": 988,
+        "code": 104530,
+        "name": "Almacén La Esquina",
+        "fantasyName": null,
+        "phoneNumber": null,
+        "address": "Calle Palma 55",
+        "location": "Asunción",
+        "salesChannel": "Tradicional",
+        "sellerCode": "456",
+        "sellerName": "Pedro Gómez",
+        "territory": "T-12",
+        "salesSegment": null,
+        "salesRegion": "Central",
+        "attentionFrom": null,
+        "attentionTo": null,
+        "isManuallyCreated": false
+      },
+
+      "worksheets": [
+        { "number": 12346, "date": "2026-09-15", "isManuallyCreated": false }
+      ],
+
+      "state": {
+        "id": 6,
+        "code": "RESCHEDULED",
+        "name": "Reagendado",
+        "description": "Entrega reprogramada",
+        "catalogCode": "S.REA",
+        "statusGroup": "OnHold",
+        "displayOrder": 4,
+        "colorHex": "#9C27B0"
+      },
+
+      "management": {
+        "assignedTo": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+        "ticketReceivedTime": "2026-09-15T11:00:00Z",
+        "startedAt": "2026-09-15T11:05:00Z",
+        "endedAt": null,
+        "isLate": true,
+        "currentDelegationType": null,
+        "currentDelegationStartedAt": null
+      },
+
+      "logistics": {
+        "distributionCenter": "CD Asunción",
+        "truck": "XYZ789",
+        "driver": { "name": "Ramón Villalba", "phone": null },
+        "seller": { "name": "Pedro Gómez", "phone": "0981333333" },
+        "supervisor": { "name": null, "phone": null },
+        "chief": { "name": null, "phone": null },
+        "logisticOperator": { "name": "Transportes del Este", "phone": null },
+        "region": "Central",
+        "salesRoom": null,
+        "territoryId": null,
+        "territoryName": null
+      },
+
+      "modulation": {
+        "origin": "WhatsApp",
+        "modulators": [
+          { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" }
+        ],
+        "totalPackages": 8,
+        "criticalityLevel": 1,
+        "criticality": "Media",
+        "criticalityColor": "#FFC107",
+        "driverComment": null,
+        "rejectionReasons": []
+      },
+
+      "orders": [
+        {
+          "orderNumber": 5501240,
+          "correlative": 1,
+          "orderDate": "2026-09-14",
+          "deliveryDate": "2026-09-15",
+          "code": "1",
+          "orderType": "Pedido regular",
+          "status": "OPEN",
+          "fr": "S",
+          "flexOrRegular": "Flex",
+          "distributionCenter": { "id": 3, "truckCode": "101", "name": "CD Asunción" },
+          "totalAmount": 48000.0,
+          "totalQuantity": 8.0,
+          "totalHectoliters": 4.2
+        },
+        {
+          "orderNumber": 5501241,
+          "correlative": 1,
+          "orderDate": "2026-09-14",
+          "deliveryDate": "2026-09-15",
+          "code": "1",
+          "orderType": "Pedido regular",
+          "status": "OPEN",
+          "fr": "S",
+          "flexOrRegular": "Flex",
+          "distributionCenter": { "id": 3, "truckCode": "101", "name": "CD Asunción" },
+          "totalAmount": 12500.0,
+          "totalQuantity": 2.0,
+          "totalHectoliters": 0.9
+        }
+      ],
+
+      "resolution": null,
+
+      "timings": {
+        "tdaSeconds": null,
+        "tdrSeconds": [],
+        "tddSeconds": null,
+        "tdmSeconds": 2400
+      },
+
+      "contactAttempts": [],
+      "resumeInteractions": [],
+
+      "events": [
+        {
+          "id": 90101,
+          "eventType": "TICKET_CREATED",
+          "fromStateId": null,
+          "toStateId": 1,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": null,
+          "metadata": null,
+          "occurredAt": "2026-09-15T11:02:00Z"
+        },
+        {
+          "id": 90102,
+          "eventType": "MANAGEMENT_STARTED",
+          "fromStateId": 1,
+          "toStateId": 2,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": null,
+          "metadata": null,
+          "occurredAt": "2026-09-15T11:05:00Z"
+        },
+        {
+          "id": 90103,
+          "eventType": "RESCHEDULED",
+          "fromStateId": 2,
+          "toStateId": 6,
+          "user": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" },
+          "userRole": "Modulador",
+          "comment": "Cliente solicita entrega mañana por la tarde",
+          "metadata": null,
+          "occurredAt": "2026-09-15T11:40:00Z"
+        }
+      ],
+
+      "reschedule": {
+        "rescheduledDate": "2026-09-16",
+        "visitTime": "15:00:00",
+        "reason": "Cliente solicita entrega mañana por la tarde",
+        "rescheduledAt": "2026-09-15T11:40:00Z",
+        "rescheduledBy": { "id": 123, "name": "Juan Pérez", "email": "juan.perez@empresa.com" }
+      },
+
+      "cancellation": null,
+
+      "remodulation": {
+        "isMotherTicket": false,
+        "parentTicketCode": null,
+        "childTicketCodes": []
+      }
+    }
+  ],
+  "page": 1,
+  "pageSize": 50,
+  "hasNextPage": false
+}
